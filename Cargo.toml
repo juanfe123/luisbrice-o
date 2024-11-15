@@ -1,0 +1,17 @@
+[package]
+name = "cv0"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.41.0", features = ["full"] }
+axum = "0.7.7"
+askama = "0.12.1"
+tower-http = { version = "0.6.1", features = ["full"] }
+num_cpus = "1.16.0"
+
+[profile.release]
+opt-level = 3
+debug = false
+overflow-checks = false
+lto = true
